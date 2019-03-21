@@ -17,14 +17,15 @@ export class CountriesService {
     if (searchValue){
         endpoint ='/name/'+searchValue;
     }
-    let response = this._http.get(this.baseUrl + endpoint)
-    console.log(response)
+    let response = this._http.get(this.baseUrl + endpoint);
+    console.log(response);
     var result= this._http.get(this.baseUrl + endpoint).pipe(
         map((data: any[]) => data.map((item: any)=> new Country(
             item.name,
             item.capital,
             item.currencies[0].code,
-            item.currencies[0].name,          
+            item.currencies[0].name,  
+            item.currencies[0].symbol,
             item.flag,
             item.population,
             item.region,
