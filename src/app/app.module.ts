@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { CountriesComponent } from './countries/countries.component';
 
 import { HttpClientModule} from '@angular/common/http';
-import { CountriesService } from '.app/countries/countries.service';
+import { CountriesService } from './countries/countries.service';
 import { SortPipe } from './countries/sort.pipe';
 
 
