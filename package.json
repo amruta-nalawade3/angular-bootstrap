@@ -25,6 +25,7 @@
     "datatables.net": "^1.10.19",
     "jquery": "^3.3.1",
     "moment": "^2.24.0",
+    "moment-timezone": "^0.5.23",
     "ng2-search-filter": "^0.4.7",
     "ngx-pagination": "^3.2.1",
     "popper.js": "^1.14.7",
