@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Country } from './country';
+import { Country } from './countries.country';
 import { map } from 'rxjs/operators';
 import * as moment from 'moment';
 
@@ -24,8 +24,7 @@ export class CountriesService {
             item.name,
             item.capital,
             item.currencies[0].code,
-            item.currencies[0].name,
-            item.currencies[0].symbol,
+            item.currencies[0].name,          
             item.flag,
             item.population,
             item.region,
