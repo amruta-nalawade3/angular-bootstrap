@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Country } from './countries.country';
 import { map } from 'rxjs/operators';
-import * as moment from 'moment';
+import moment from 'moment';
+
 
 
 @Injectable()
@@ -41,11 +42,10 @@ export class CountriesService {
 
   public getCurrentTime(timeZone){
         let utcDateTime = moment.utc();
-        console.log("utcDateTime");
-        
-        let currentDateTime="";
+        console.log(utcDateTime);        
+        let currentDateTime=moment(utcDateTime).utcOffset(timeZone).format("lll");
         console.log(currentDateTime);
-        return "currentDateTime";
+        return currentDateTime;
   }
 
   public getSingleCountry(countryName): any {
