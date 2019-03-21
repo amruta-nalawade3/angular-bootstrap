@@ -41,7 +41,9 @@ export class CountriesService {
 
   public getCurrentTime(timeZone){
         let utcDateTime = moment.utc();
-        let currentDateTime= moment(utcDateTime).utcOffset(timeZone).format("lll");
+        console.log(utcDateTime);
+        let currentDateTime= moment(utcDateTime).format('lll');
+        console.log(currentDateTime);
         return currentDateTime;
   }
 
