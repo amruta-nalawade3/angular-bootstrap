@@ -24,6 +24,7 @@ export class CountriesComponent implements OnInit {
     console.log("countries ngOnInit called")    
     this.restHttpService.getCountries(null).subscribe(
       data => {
+        console.log("data");
         console.log(data);
         this.allCountries = data;
         this.calculateNumberOfPages(this.allCountries.length);
