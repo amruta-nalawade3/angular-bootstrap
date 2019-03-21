@@ -13,7 +13,6 @@ export class CountriesService {
   public baseUrl = 'https://restcountries.eu/rest/v2'
 
   public getCountries(searchValue):Observable<Country[]>{
-    console.log("inside countries");
     let endpoint = '/all';
     if (searchValue){
         endpoint ='/name/'+searchValue;
@@ -37,10 +36,8 @@ export class CountriesService {
   }
 
   public getCurrentTime(timeZone){
-        let utcDateTime = moment.utc();
-        console.log(utcDateTime);        
+        let utcDateTime = moment.utc();      
         let currentDateTime=moment(utcDateTime).utcOffset(timeZone).format("lll");
-        console.log(currentDateTime);
         return currentDateTime;
   }
 
