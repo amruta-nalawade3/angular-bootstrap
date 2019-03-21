@@ -1,0 +1,42 @@
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #405065;
+  }
+  
+  .search-country {
+    max-width: 500px;
+    padding-bottom: 50px;
+    margin:auto;
+  }
+  
+  .form-control {
+    width: 500px;
+    box-shadow: 0 10px 40px 0 #B0C1D9;
+  }
+ 
+  .card {
+    font-family: FontAwesome;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 230px;
+    background-color: #f6f8fa;
+    color: rgb(3, 19, 63);
+    box-shadow: 0 5px 15px 0 #B0C1D9;
+  }
+
+  .card-text {
+    margin-left: 10%;
+  }
+
+  .list-card{
+    font-family: FontAwesome;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    background-color: #f6f8fa;
+  }
+
+  .pagination-number{
+    cursor: pointer;
+  }
+
