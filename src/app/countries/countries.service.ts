@@ -12,13 +12,14 @@ export class CountriesService {
   public baseUrl = 'https://restcountries.eu/rest/v2'
 
   public getCountries(searchValue):Observable<Country[]>{
+    console.log("inside countries");
     let endpoint = '/all';
     if (searchValue){
         endpoint ='/name/'+searchValue;
     }
     let response = this._http.get(this.baseUrl + endpoint)
     console.log(response)
-    return this._http.get(this.baseUrl + endpoint).pipe(
+    var result= this._http.get(this.baseUrl + endpoint).pipe(
         map((data: any[]) => data.map((item: any)=> new Country(
             item.name,
             item.capital,
@@ -33,7 +34,9 @@ export class CountriesService {
             this.getCurrentTime(item.timezones[0]) 
         ))),
     );
-       
+      console.log("result") ;
+      console.log(result);
+      return result;
   }
 
   public getCurrentTime(timeZone){
