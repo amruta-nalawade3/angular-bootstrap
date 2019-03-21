@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Country } from 'src/app/countries/country';
+import { Country } from './country';
 import { map } from 'rxjs/operators';
-import * as moment from '@moment';
+import * as moment from 'moment';
 
 
 @Injectable()
