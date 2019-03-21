@@ -3,7 +3,7 @@ export class Country{
         public name: string,
         public capital: string,
         public currencyCode: string,
-        public currencyName: string,        
+        public currencyName: string,
         public flag: string,
         public population : number,        
         public region : string,
