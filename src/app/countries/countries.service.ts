@@ -18,8 +18,6 @@ export class CountriesService {
     if (searchValue){
         endpoint ='/name/'+searchValue;
     }
-    let response = this._http.get(this.baseUrl + endpoint);
-    console.log(response);
     var result= this._http.get(this.baseUrl + endpoint).pipe(
         map((data: any[]) => data.map((item: any)=> new Country(
             item.name,
@@ -34,9 +32,7 @@ export class CountriesService {
             item.timezones[0],                   
             this.getCurrentTime(item.timezones[0]) 
         ))),
-    );
-      console.log("result") ;
-      console.log(result);
+    );   
       return result;
   }
 
