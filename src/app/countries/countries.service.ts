@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Country } from './countries.country';
 import { map } from 'rxjs/operators';
-import * as moment from 'moment-timezone';
+import * as moment from 'moment';
 
 
 @Injectable()
@@ -43,7 +43,7 @@ export class CountriesService {
         let utcDateTime = moment.utc();
         console.log("utcDateTime");
         
-        let currentDateTime = moment.utcOffset(utcDateTime)*60;
+        let currentDateTime="";
         console.log(currentDateTime);
         return "currentDateTime";
   }
