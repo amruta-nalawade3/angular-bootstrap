@@ -22,7 +22,7 @@ export class CountriesComponent implements OnInit {
   ngOnInit() {
 
     console.log("countries ngOnInit called")    
-    this.restHttpService.getCountries(null).subscribe(
+    this.restHttpService.getCountries('').subscribe(
       data => {
         console.log("data");
         console.log(data);
